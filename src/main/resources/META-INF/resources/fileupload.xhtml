@@ -28,8 +28,11 @@
 						<br />
 						<br />
 
-						<p:commandButton value="Submit" ajax="false"
-							action="#{fileUploadView.upload}" disabled="false" />
+						<p:commandButton id="uploadButton" value="Submit" ajax="false"
+							action="#{fileUploadView.upload}" disabled="#{fileUploadView.buttonDisabled}" />
+							
+<p:commandButton id="btn1" value="Submit"
+ widgetVar="demoButton" onclick="demoButton.disable()"/>							
 					</h:form>
 
 				</div>

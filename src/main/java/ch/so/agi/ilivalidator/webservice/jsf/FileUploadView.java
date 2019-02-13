@@ -13,6 +13,8 @@ import org.primefaces.model.UploadedFile;
 public class FileUploadView {
     private UploadedFile file;
     
+    private boolean buttonDisabled = false;
+    
     public UploadedFile getFile() {
         return file;
     }
@@ -21,8 +23,18 @@ public class FileUploadView {
         this.file = file;
     }
      
+    public boolean isButtonDisabled() {
+        return buttonDisabled;
+    }
+
+    public void setButtonDisabled(boolean buttonDisabled) {
+        this.buttonDisabled = buttonDisabled;
+    }
+
     public void upload() {
         System.out.println("****"+file.getFileName());
+        
+        buttonDisabled = true;
         
         if (file == null || file.getFileName().equalsIgnoreCase("")) {
             FacesContext saveContext = FacesContext.getCurrentInstance();
