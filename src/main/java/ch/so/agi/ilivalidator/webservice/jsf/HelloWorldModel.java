@@ -1,9 +1,9 @@
-package ch.so.agi.ilivalidator.webservice.models;
+package ch.so.agi.ilivalidator.webservice.jsf;
 
 import javax.inject.Named;
 
-@Named
-public class HelloWorld {
+@Named("helloWorld")
+public class HelloWorldModel {
     private String firstName = "John";
     private String lastName = "Doe";
 
